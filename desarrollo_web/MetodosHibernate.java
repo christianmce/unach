@@ -26,6 +26,18 @@
         conn.delete(e);       
         conn.flush();
         
+        //Mostrar los resultados de una consulta con HQL en una table 
+        List res = conn.createQuery("from Clientes").setMaxResults(10).list();    
+        Iterator i = res.iterator();
+        while(i.hasNext()) {
+            Clientes t = (Clientes) i.next();
+            out.println("<tr>");
+                out.println("<td>" + t.getIdCliente()  + "</td>");                
+            out.println("</tr>");
+        }  
+
+
+        //Consulta usando HQL con una query predefinida con nombre creada en el archivo Pais.hbm.xml
         List res = conn.getNamedQuery("paises_grandes").setMaxResults(10).list();
         Iterator i = res.iterator();
         while(i.hasNext()) {
