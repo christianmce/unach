@@ -8,6 +8,8 @@ FILE *archivo = fopen("datos.txt", "r+");
 
 
 //mientras archivo n o apunte a EOF, seguirá el ciclo
+// EOF significa  End-Of-File
+	
 while(!feof(archivo)){
 
 	fscanf(archivo,"%d",&numero);
