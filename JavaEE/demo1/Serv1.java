@@ -12,8 +12,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- *
- * @author chris
+  * @author Mtro. Christian Mauricio Castillo Estrada
+  * Facultad de Negocios CIV, Universidad Autónoma de Chiapas
  */
 @WebServlet(name = "Serv1", urlPatterns = {"/Serv1"})
 public class Serv1 extends HttpServlet {
