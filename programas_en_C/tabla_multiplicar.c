@@ -8,10 +8,10 @@
 int main(int argc, char *argv[]) {
     int x=1,n;
     
-    printf("Ingresa un número entero:");
+    printf("Ingresa un nÃºmero entero:");
     scanf("%d",&n);
     
-    while(x<=10){
+    	while(x<=10){
 		
 		printf("%d  *  %d  =  %d  \n",x,n,(x*n));
 		x++;
