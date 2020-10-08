@@ -1,10 +1,9 @@
-# ------------------------------------------
-# 
+# -----------------------------------------------------------------
 # Project:      Draw Triangle Project
-#	Author:       Mtro. Christian Mauricio Castillo Estrada
-#	Created:      08/10/2020
-# 
-# ------------------------------------------
+# Author:       Mtro. Christian Mauricio Castillo Estrada
+# Created:      08/10/2020
+# Facultad de Negocios Campus IV, Universidad Autónoma de Chiapas 
+# -----------------------------------------------------------------
 
 # Library imports
 from vexcode import *
