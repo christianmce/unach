@@ -1,8 +1,8 @@
 # -----------------------------------------------------------
-#   Project:      Encontrar la coordenada (0,0) 
-#	Author:       Mtro. Christian Mauricio Castillo Estrada
-#	Created:      14/10/2020
-#	Faculta de Negocios CIV, Universidad Autónoma de Chiapas
+#Project:      Encontrar la coordenada (0,0) 
+#Author:       Mtro. Christian Mauricio Castillo Estrada
+#Created:      14/10/2020
+#Faculta de Negocios CIV, Universidad Autónoma de Chiapas
 # -----------------------------------------------------------
 
 from vexcode import *
