@@ -1,3 +1,10 @@
+# -----------------------------------------------------------
+#Project:      Transportar discos magnéticos  
+#Author:       Mtro. Christian Mauricio Castillo Estrada
+#Created:      14/10/2020
+#Facultad de Negocios CIV, Universidad Autónoma de Chiapas
+# -----------------------------------------------------------
+
 # Library imports
 from vexcode import *
 
