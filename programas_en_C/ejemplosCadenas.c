@@ -1,3 +1,6 @@
+//Autor: Mtro. Christian Mauricio Castillo Estrada
+//Facultad de Negocios Campus IV UNACH 2020
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -25,3 +28,20 @@ int main(int argc, char *argv[]) {
 }
 
 
+/*  Apuntes Extras sobre el uso de variables de tipo CHAR
+
+     %c -> 1char     getchar();
+     %s -> string    gets(nombre);   -->  puts(nombre);     
+     
+	if(strcmp(nom1,nom2)==0)
+	{
+		printf("\n Se ha logrado localizar, son iguales");
+	}
+	else
+	{
+		printf("\n Son diferentes valores");
+	}
+	
+	Ejemplo de comparar un arreglo de cadena con un variable char
+	if( strcmp(estudiantes[x],nombre) == 0 )   
+*/
