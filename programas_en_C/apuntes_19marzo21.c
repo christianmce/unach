@@ -1,3 +1,6 @@
+/*** ### Autor: Mtro. Christian Mauricio Castillo Estrada  (19/03/2021) ### ***/
+/*** ### Facultad de Negocios Campus IV de la UNACH  ### ***/
+
 #include <stdio.h>
 #include <stdlib.h>
 void reporte1();
