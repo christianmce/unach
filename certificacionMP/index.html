@@ -1,0 +1,17 @@
+<title>Tienda Online ChristianMCE</title>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="format-detection" content="telephone=no">
+
+<! –– Es importante agregar esta línea indicando la llamada al archivo de script externo de seguridad -->
+<script src="https://www.mercadopago.com/v2/security.js" view="item"></script>
+
+
+<! -- Se debe insertar el siguiente código las veces que sea necesario por cada producto o al menos uno -->
+<form action="detail.php" method="get">
+  <input type="hidden" name="img" value="./assets/fundabasket.png">
+  <input type="hidden" name="title" value="Funda Basket para Samsung Galaxy">
+  <input type="hidden" name="price" value="57">
+  <input type="hidden" name="unit" value="1">
+  <button type="submit" class="mercadopago-button" formmethod="post">Comprar/Pagar</button>
+ </form>
