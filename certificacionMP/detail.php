@@ -71,3 +71,37 @@ $preference->save();
     
     <meta name="viewport" content="width=1024">
     <title>Tienda e-commerce</title>
+
+    
+    
+<!--  codigo relativo al boton de pagar compra -->
+    
+                            <div class="as-producttile-info" style="float:left;min-height: 168px;">
+                                    <div class="as-producttile-titlepricewraper" style="min-height: 128px;">
+                                        <div class="as-producttile-title">
+                                            <h3 class="as-producttile-name">
+                                                <p class="as-producttile-tilelink">
+                                                    <span data-ase-truncate="2"><b></b><?php echo $_POST['title'] ?></b></span>
+                                                </p>
+
+                                            </h3>
+                                        </div>
+                                        <h3 class="as-producttile-name">
+                                            <?php echo "$ ".money_format('%i', $_POST['price'])." pesos MX" ?>
+                                        </h3>
+                                        <h3 class="as-producttile-name">
+                                            <?php echo "Cantidad: ". $_POST['unit'] ?>
+                                        </h3>
+                                    </div>
+                                    <br><br>
+                                    <div class="mt-2">
+                                        <a href="<?= $preference->init_point ?>" class="mercadopago-button" style="height:80px;">PAGAR LA COMPRA</a>
+                                    </div>
+                                    <br><br>
+                                    <a href="./" class="btn-back"><b><< Regresar al Home</b></a>
+                                </div>  
+
+
+
+    
+ 
