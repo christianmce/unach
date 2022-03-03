@@ -13,7 +13,7 @@
 	</div><br>
         <div class="p-field">
 		<label for="name">Email: </label>
-		<Calendar v-model="value" />
+		<InputText type="text" v-model="text"/>	
         </div><br>
          <Button label="Registrar" icon="pi pi-check" iconPos="right" @click="agregar"/>
          <Button label="Cancelar" class="p-button-danger" icon="pi pi-check" iconPos="right" />                 
