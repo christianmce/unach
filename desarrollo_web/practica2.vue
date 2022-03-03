@@ -4,18 +4,17 @@
 
 <Panel header="REGISTRAR CLIENTE" style="height:350px;width:500px;">            
         <div class="p-field">
-						<label for="name">idCliente: </label>
-						<InputText type="text" v-model="text"/>						
-				</div><br>               
+		<label for="name">idCliente: </label>
+		<InputText type="text" v-model="text"/>						
+	</div><br>               
         <div class="p-field">
-						<label for="name">Nombre: </label>
-						<InputText type="text" v-model="text"/>						
-				</div><br>
+		<label for="name">Nombre: </label>
+		<InputText type="text" v-model="text"/>						
+	</div><br>
         <div class="p-field">
-						<label for="name">Email: </label>
-						<Calendar v-model="value" />
-         </div><br>
-
+		<label for="name">Email: </label>
+		<Calendar v-model="value" />
+        </div><br>
          <Button label="Registrar" icon="pi pi-check" iconPos="right" @click="agregar"/>
          <Button label="Cancelar" class="p-button-danger" icon="pi pi-check" iconPos="right" />                 
 </Panel>    
