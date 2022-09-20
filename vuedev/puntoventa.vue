@@ -17,7 +17,7 @@ https://primefaces.org/primevue/datatable/crud
 				</Toolbar>
 				<br>
 
-				<DataTable :value="tablaCompras" v-model:selection="productoItem" class="p-datatable-gridlines" dataKey="cns" :rows="5" 
+			<DataTable :value="tablaCompras" v-model:selection="productoItem" class="p-datatable-gridlines" dataKey="cns" :rows="5" 
 				paginatorTemplate="FirstPageLink PrevPageLink PageLinks NextPageLink LastPageLink CurrentPageReport RowsPerPageDropdown"
 				:rowsPerPageOptions="[5,10,25]"
 				currentPageReportTemplate="Visualizando {last} de {totalRecords} productos"
@@ -33,8 +33,8 @@ https://primefaces.org/primevue/datatable/crud
 				<Column field="cantidad" header="Cant." style="width:60px;text-align:center"></Column>
 				<Column field="precioParcial" header="Precio P." style="width:80px">
 					<template #body="slotProps">
-                            {{ formatoMoneda(slotProps.data.precioParcial) }}
-                    </template></Column>
+                            			{{ formatoMoneda(slotProps.data.precioParcial) }}
+                    			</template></Column>
 				<Column style="width:140px">
 					<template #header>
 						Acciones
@@ -68,30 +68,29 @@ https://primefaces.org/primevue/datatable/crud
 export default {
     data() {
         return {                			
-					tablaCompras: [
-					{"cns": 1, "nomProducto": "Impresora LaserJet Color", "cantidad": 2, "precioUnitario": 5200.00, "precioParcial": 10400.00},
-					{"cns": 2, "nomProducto": "Monitor LED 31 plg.", "cantidad": 3, "precioUnitario": 1700.00, "precioParcial": 5100.00}
-					],
-					productoItem: {
-						cns: null,
-						nomProducto: null,
-						cantidad:null,
-						precioUnintario:null,
-						precioParcial:null
-					}
+			tablaCompras: [
+			{"cns": 1, "nomProducto": "Impresora LaserJet Color", "cantidad": 2, "precioUnitario": 5200.00, "precioParcial": 10400.00},
+			{"cns": 2, "nomProducto": "Monitor LED 31 plg.", "cantidad": 3, "precioUnitario": 1700.00, "precioParcial": 5100.00}
+			],
+			productoItem: {
+				cns: null,
+				nomProducto: null,
+				cantidad:null,
+				precioUnintario:null,
+				precioParcial:null
 			}
+		}
 		},
 		created() {
 			
 		},		
 		methods: {
 			formatoMoneda(value) {
-			if(value)
+				if(value)
 					return value.toLocaleString('en-US', {style: 'currency', currency: 'USD'});
 				return;
 			},	
-			registrarCompra(){				
-				
+			registrarCompra(){								
 				this.tablaCompras.push(this.productoItem);
 				this.$toast.add({severity:'success', summary: 'Confirmación', detail: 'Nueva compra registrada', life: 3000});
 			},		
