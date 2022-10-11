@@ -1,14 +1,14 @@
 <template>
 
 <div class="col-12">
-			<div class="card">
-				<h5>Lista de Empleados</h5>
-				<DataTable :value="datosTodos.data" sortMode="single" class="p-datatable-gridlines" rows="7" :paginator="true" responsiveLayout="scroll">
+	<div class="card">
+		<h5>Lista de Empleados</h5>
+		<DataTable :value="datosTodos.data" sortMode="single" class="p-datatable-gridlines" rows="7" :paginator="true" responsiveLayout="scroll">
                     <Column field="employee_name" header="Nombre del Empleado"></Column>
                     <Column field="employee_salary" header="Salario" style="min-width:200px"></Column>                    
                     <Column field="employee_age" header="Edad" style="min-width:200px"></Column>
                 </DataTable>
-			</div>
+	</div>
 </div>
 
 </template>
