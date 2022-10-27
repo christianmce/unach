@@ -1,7 +1,9 @@
-import os
+# Universidad Autónoma de Chiapas
+# Dr. Christian Mauricio Castillo Estrada <cmce@unach.mx>
+
 import pandas as pd
 
-ventas = pd.read_csv("ventas_abril2019.csv")
+ventas = pd.read_csv("Ventas_Abril:2019.csv")
 ventas.head()
 
 
@@ -9,6 +11,7 @@ ventas.head()
 nan_df = ventas[ventas.isna().any(axis=1)]
 display(nan_df.head())
 
+#Imprimir Dataframe limpio
 ventas = ventas.dropna(how='all')
 ventas.head()
 
@@ -18,11 +21,8 @@ ventas['Month'] = ventas['Month'].astype('int32')
 ventas.head()
 
 #Agregar la columna Ciudad derivado de la Dirección de la compra
-def get_city(address):
-    return address.split(",")[1].strip(" ")
+ventas['Ciudad'] = ventas['Purchase Address'].str.split(",").str[1]
+#print(ventas.head())
 
-def get_state(address):
-    return address.split(",")[2].split(" ")[1]
-
-all_data['City'] = all_data['Purchase Address'].apply(lambda x: f"{get_city(x)}  ({get_state(x)})")
-all_data.head()
+ventas['Price Each'] = pd.to_numeric(ventas['Price Each'],errors='coerce')
+ventas = ventas.loc[ventas['Price Each'] < 12.00]
