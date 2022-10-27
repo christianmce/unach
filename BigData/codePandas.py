@@ -1,4 +1,4 @@
-# Universidad Autónoma de Chiapas
+# Universidad Autónoma de Chiapas / Facultad de Negocios Campus IV
 # Dr. Christian Mauricio Castillo Estrada <cmce@unach.mx>
 
 import pandas as pd
