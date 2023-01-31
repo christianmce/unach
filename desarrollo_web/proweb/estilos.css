@@ -1,0 +1,18 @@
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+}
+.mitabla1{
+  width: 300px;
+  border: 1px solid #818183;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.mitabla1 thead tr { background-color: #000080; color: #ffffff; text-align: middle; height: 27px;}
+
+.mitabla1 tbody tr { border-bottom: 1px solid #dddddd;   height: 27px;} 
+
+.mitabla1 tbody tr:nth-of-type(even) { background-color: #f3f3f3; } 
+
+.mitabla1 tbody tr:last-of-type { border-bottom: 2px solid #009879; }
