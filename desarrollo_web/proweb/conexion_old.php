@@ -1,4 +1,6 @@
 <?php
+//Para versiones menores a PHP 7
+
 function conectaDB() 
 { 
   	$host = 'localhost'; //'148.222.7.8'
