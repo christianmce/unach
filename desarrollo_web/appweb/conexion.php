@@ -2,8 +2,8 @@
 function conectaDB() 
 { 
   	$host = 'localhost'; 
-	$user = 'id21339672_useradmin1';
-	$pass = 'Unach23..//';
+	$user = 'id21339672_useradmin1';  //nombre de Usuario que proporciona 000webhost
+	$pass = 'establecer_contraseña';
 
    if (!( $link = @mysqli_connect($host,$user,$pass)) )
    {
@@ -11,7 +11,7 @@ function conectaDB()
       exit();
    }
 
-   if (!mysqli_select_db($link,"id21339672_miempresa"))
+   if (!mysqli_select_db($link,"id21339672_miempresa")) //nombre dela BD que proporciona 000webhost
    { 
       echo "Error al seleccionar la base de datos."; 
       exit(); 
