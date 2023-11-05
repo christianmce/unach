@@ -1,3 +1,9 @@
+## -----------------------------------------------------------------------------------------------------
+Referencias para crear un Server usando PostgreSQL:
+-  https://whatsyourssn.com/posts/real-time-app-socket-postgresql/
+-  https://martiriera.medium.com/socket-io-postgresql-and-knex-js-be973e5e8880
+-  https://socket.io/docs/v4/postgres-adapter/
+
 # ------------------------------------------------------------------------------------------------------
 #Client-Side Vue app
 
