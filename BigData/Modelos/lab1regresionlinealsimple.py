@@ -8,10 +8,10 @@ import pandas as pd
 
 df = pd.read_csv("estudiantes.csv")
 #verificar valores nulos
-#print(df.isnull().sum())
+print(df.isnull().sum())
 
 #analizar la correlación que existe entre variables
-#print(df.corr()['horas_estudio'])
+print(df.corr()['horas_estudio'])
 
 #asignar valores a las variables dependiente e independiente
 X=df['horas_estudio'].values
@@ -19,7 +19,7 @@ X= X.reshape(-1,1)
 y=df['pts'].values
 
 #graficar la relación entre variables del conjunto de datos
-#plt.scatter(X,y,color="red")
+plt.scatter(X,y,color="red")
 
 #dividir el conjunto de datos
 from sklearn.model_selection import train_test_split
