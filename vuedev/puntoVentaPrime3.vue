@@ -1,13 +1,12 @@
 <script>
 
-import Dialog from 'primevue/dialog';
 import { useToast } from 'primevue/usetoast';
 import { ref, onBeforeMount, onMounted, computed } from 'vue';
 
 export default {
     data() {
 
-		const toast = useToast();
+	const toast = useToast();
         const visibleUpdate = ref(false);
         const visibleDelete = ref(false);
 
@@ -16,38 +15,20 @@ export default {
         const precioUnitario = ref('');
 
         async function editarProducto(row) {
-            
-            nomp.value = row.nomProducto;
-            precioUnitario.value = row.precioUnitario;
-            cantidad.value = row.cantidad;
-            
-            this.productoItem.cns = row.cns;
-            this.visibleUpdate = true;
+           
         }
 
         async function updateProducto() {
-            const productoIndex = this.tablaCompras.findIndex(item => item.cns === this.productoItem.cns);
-
-            if (productoIndex !== -1) {
-                this.tablaCompras[productoIndex].nomProducto = this.nomp;
-                this.tablaCompras[productoIndex].cantidad = this.cantidad;
-                this.tablaCompras[productoIndex].precioUnitario = "$" +  this.precioUnitario;
-                this.tablaCompras[productoIndex].precioParcial = this.cantidad * this.precioUnitario;
-            }
-            this.visibleUpdate = false;
+            
         }
 
         async function eliminarProducto(row) {
-			this.visibleDelete = true;
-		}
+			
+	}
 
-		async function deleteProducto(row) {
-			const index = this.tablaCompras.indexOf(row);
-			if (index !== -1) {
-				this.tablaCompras.splice(index, 1);
-			}
-			this.visibleDelete = false;
-		}
+	async function deleteProducto(row) {
+			
+	}
 
 		async function registrarCompra() {
 			if (
@@ -67,14 +48,12 @@ export default {
 				this.productoItem.nomProducto = '';
 				this.productoItem.cantidad = '';
 				this.productoItem.precioUnintario = '';
-			} else {
-				toast.add({ severity: 'warn', summary: 'Alerta', detail: 'Verifica que los campos estén completos.', life: 3000 });
-			}
+			} 
 		}
 
         return { 
-			registrarCompra,
-			toast,      
+	    registrarCompra,
+	    toast,      
             nomp,
             cantidad,
             precioUnitario,
@@ -109,19 +88,13 @@ export default {
         },
 		computed: {
 			subtotal() {
-				return this.tablaCompras.reduce((subtotal, producto) => {
-					return subtotal + producto.precioParcial;
-				}, 0);
+				
 			},
 			iva(){
-				return this.tablaCompras.reduce((iva, producto) => {
-					return iva + (producto.precioParcial * 0.16);
-				}, 0);
+				
 			},
 			totalTotal(){
-				return this.tablaCompras.reduce((total, producto) => {
-					return total + producto.precioParcial + (producto.precioParcial * 0.16);
-				}, 0);
+				
 			}
 		}
 }
@@ -211,12 +184,8 @@ export default {
 								
 				</template>
 				<template v-slot:end>
-                    <label for="total">Subtotal: </label>
-					<InputText class="ml-3" type="text" placeholder="$ " v-model="subtotal" disabled/>	
-                    <label class="ml-5" for="total">IVA (16%): </label>
-					<InputText class="ml-3" type="text" placeholder="$ " v-model="iva" disabled/>	
-					<label class="ml-5" for="total">Total: </label>
-					<InputText class="ml-3" type="text" placeholder="$ " v-model="totalTotal" disabled/>	
+                    
+				
 				</template>
 				</Toolbar>
 			</Panel>
